@@ -38,6 +38,8 @@ Testing experiments can be performed by running the command `python Test_Predict
 
 Speech source estimates should then be evaluated against the clean speech file they are estimating. This can be done using <b>Evaluate.m</b>, which selects multiple files and performs the <b>composite.m</b> script [7] (available [here](https://ecs.utdallas.edu/loizou/speech/software.htm)) upon each one, calculating the PESQ, SSNR, CSIG, CBAK and COVL.
 
+Audio examples of both speech and background noise estimates of the VCTK test set, alongside the noisy test files and clean speech for reference, are available for download in the <b>audio_examples</b> directory.
+
 <br>
 
 ## References

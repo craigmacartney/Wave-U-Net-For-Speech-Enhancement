@@ -1,0 +1,5 @@
+*.pyc
+checkpoints/*
+Models/__pycache__/*
+Inputs/__pycache/*
+__pycache__/*

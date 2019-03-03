@@ -1,4 +1,6 @@
-# Improved Speech Enhancement with the Wave-U-Net
+# Speech Enhancement with the Wave-U-Net
+
+This repo is for personal research into existing wavenet architectures for audio denoising
 
 The [Wave-U-Net applied to speech enhancement](http://arxiv.org/abs/1811.11307) [1], an adaptation of the [original implementation](https://github.com/f90/Wave-U-Net) for music source separation by [Stoller et al](https://arxiv.org/abs/1806.03185) [2].
 

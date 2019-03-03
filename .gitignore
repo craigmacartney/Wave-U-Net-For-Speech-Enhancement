@@ -1,4 +1,6 @@
 *.pyc
+clean_trainset_wav/*
+noisy_trainset_wav/*
 checkpoints/*
 Models/__pycache__/*
 Inputs/__pycache/*

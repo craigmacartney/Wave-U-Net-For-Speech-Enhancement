@@ -3,7 +3,7 @@ File to carry out combining the Voice Bank Corpus data for training the Wave-U-N
 '''
 import os
 import argparse
-import wave
+from scipy.io.wavfile import read,write
 import shutil 
 
 parser = argparse.ArgumentParser()
@@ -13,14 +13,17 @@ parser.add_argument("storage_folder",help = "Destination folder in your working 
 
 if __name__ =="__main__":
     args = parser.parse_args()
+
     if not os.path.exists(args.storage_folder):
         os.mkdir(args.storage_folder)
     
     files = os.listdir(args.clean_source)
     for file_name in files:
-        if not os.path.exists("{0}/{1}".format(args.storage_folder,file_name[:4])):
-            os.mkdir("{0}/{1}".format(args.storage_folder,file_name[:4]))
-        shutil.copy2("{0}/{1}".format(args.clean_source,file_name),"{0}/{1}/clean.wav".format(args.storage_folder,file_name[:4]))
-        shutil.copy2("{0}/{1}".format(args.noisy_source,file_name),"{0}/{1}/mixed.wav".format(args.storage_folder,file_name[:4]))
+        if not os.path.exists("{0}/{1}".format(args.storage_folder,file_name[:-4])):
+            os.mkdir("{0}/{1}".format(args.storage_folder,file_name[:-4]))
+        shutil.copy2("{0}/{1}".format(args.clean_source,file_name),"{0}/{1}/clean.wav".format(args.storage_folder,file_name[:-4]))
+        shutil.copy2("{0}/{1}".format(args.noisy_source,file_name),"{0}/{1}/mixed.wav".format(args.storage_folder,file_name[:-4]))
         
-    
+        fs,clean = read("{0}/{1}".format(args.clean_source,file_name))
+        fs,mixed = read("{0}/{1}".format(args.noisy_source,file_name))
+        write("{0}/{1}/noise.wav".format(args.storage_folder,file_name[:-4]),fs,mixed-clean)

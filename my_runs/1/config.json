@@ -1,0 +1,35 @@
+{
+  "cfg": {
+    "experiment_id": 555814, 
+    "model_config": {
+      "augmentation": true, 
+      "batch_size": 16, 
+      "cache_size": 16, 
+      "context": false, 
+      "duration": 2, 
+      "epoch_it": 2000, 
+      "expected_sr": 22050, 
+      "filter_size": 15, 
+      "init_sup_sep_lr": 0.0001, 
+      "log_dir": "logs", 
+      "merge_filter_size": 5, 
+      "min_replacement_rate": 16, 
+      "model_base_dir": "checkpoints", 
+      "mono_downmix": true, 
+      "network": "unet", 
+      "num_channels": 1, 
+      "num_frames": 16384, 
+      "num_initial_filters": 24, 
+      "num_layers": 12, 
+      "num_sources": 2, 
+      "num_workers": 6, 
+      "output_type": "direct", 
+      "raw_audio_loss": true, 
+      "task": "speech", 
+      "upsampling": "linear", 
+      "worse_epochs": 20
+    }, 
+    "seed": 1337
+  }, 
+  "seed": 869737627
+}

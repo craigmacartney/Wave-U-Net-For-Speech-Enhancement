@@ -1,0 +1,121 @@
+{
+  "artifacts": [], 
+  "command": "run", 
+  "experiment": {
+    "base_dir": "/home/mathew/Documents/Wave-U-Net-For-Speech-Enhancement-1", 
+    "dependencies": [
+      "numpy==1.16.2", 
+      "sacred==0.7.3", 
+      "tensorflow-gpu==1.8.0"
+    ], 
+    "mainfile": "Training.py", 
+    "name": "Waveunet Training", 
+    "repositories": [], 
+    "sources": [
+      [
+        "Config.py", 
+        "_sources/Config_0b55c3f5647d8cceaca5fb496cd61221.py"
+      ], 
+      [
+        "Datasets.py", 
+        "_sources/Datasets_25385f98abb2be1e963552beafb3947b.py"
+      ], 
+      [
+        "Input/Input.py", 
+        "_sources/Input_063b3012ab8d1fb8b72307548c1f91ea.py"
+      ], 
+      [
+        "Input/__init__.py", 
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ], 
+      [
+        "Input/batchgenerators.py", 
+        "_sources/batchgenerators_71c4ddce98873e5198415da3e19bd23e.py"
+      ], 
+      [
+        "Models/__init__.py", 
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ], 
+      [
+        "Training.py", 
+        "_sources/Training_a83912dc0f2108b3966c4e34d86bdf05.py"
+      ], 
+      [
+        "Utils.py", 
+        "_sources/Utils_ff427b8708361ca5a3cf25ccb466e025.py"
+      ], 
+      [
+        "Validation.py", 
+        "_sources/Validation_294da626e3066368e8a354e0d4771dfc.py"
+      ]
+    ]
+  }, 
+  "fail_trace": [
+    "Traceback (most recent call last):\n", 
+    "  File \"/home/mathew/anaconda3/envs/waveunet/lib/python2.7/site-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n", 
+    "  File \"Training.py\", line 190, in run\n    dataset_train = Datasets.getAudioData(\"audio_examples/\")\n", 
+    "  File \"/home/mathew/Documents/Wave-U-Net-For-Speech-Enhancement-1/Datasets.py\", line 16, in getAudioData\n    tree = etree.parse(xml_path)\n", 
+    "  File \"src/lxml/etree.pyx\", line 3426, in lxml.etree.parse\n", 
+    "  File \"src/lxml/parser.pxi\", line 1839, in lxml.etree._parseDocument\n", 
+    "  File \"src/lxml/parser.pxi\", line 1865, in lxml.etree._parseDocumentFromURL\n", 
+    "  File \"src/lxml/parser.pxi\", line 1769, in lxml.etree._parseDocFromFile\n", 
+    "  File \"src/lxml/parser.pxi\", line 1162, in lxml.etree._BaseParser._parseDocFromFile\n", 
+    "  File \"src/lxml/parser.pxi\", line 600, in lxml.etree._ParserContext._handleParseResultDoc\n", 
+    "  File \"src/lxml/parser.pxi\", line 710, in lxml.etree._handleParseResult\n", 
+    "  File \"src/lxml/parser.pxi\", line 639, in lxml.etree._raiseParseError\n", 
+    "XMLSyntaxError: Document is empty, line 1, column 1 (line 1)\n"
+  ], 
+  "heartbeat": "2019-03-03T19:45:38.218033", 
+  "host": {
+    "ENV": {}, 
+    "cpu": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz", 
+    "gpus": {
+      "driver_version": "384.130", 
+      "gpus": [
+        {
+          "model": "GeForce GTX 1080", 
+          "persistence_mode": false, 
+          "total_memory": 8110
+        }
+      ]
+    }, 
+    "hostname": "sys76-desktop", 
+    "os": [
+      "Linux", 
+      "Linux-4.15.0-45-generic-x86_64-with-debian-stretch-sid"
+    ], 
+    "python_version": "2.7.15"
+  }, 
+  "meta": {
+    "command": "run", 
+    "options": {
+      "--beat_interval": null, 
+      "--capture": null, 
+      "--comment": null, 
+      "--debug": false, 
+      "--enforce_clean": false, 
+      "--file_storage": null, 
+      "--force": false, 
+      "--help": false, 
+      "--loglevel": null, 
+      "--mongo_db": null, 
+      "--name": null, 
+      "--pdb": false, 
+      "--print_config": false, 
+      "--priority": null, 
+      "--queue": false, 
+      "--sql": null, 
+      "--tiny_db": null, 
+      "--unobserved": false, 
+      "COMMAND": null, 
+      "UPDATE": [], 
+      "help": false, 
+      "with": false
+    }
+  }, 
+  "resources": [], 
+  "result": null, 
+  "start_time": "2019-03-03T19:45:38.213630", 
+  "status": "FAILED", 
+  "stop_time": "2019-03-03T19:45:38.220748"
+}

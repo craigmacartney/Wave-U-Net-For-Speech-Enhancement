@@ -1,4 +1,8 @@
 *.pyc
+.vscode/*
+clean_trainset_wav/*
+noisy_trainset_wav/*
+finished/*
 checkpoints/*
 Models/__pycache__/*
 Models/*.pyc

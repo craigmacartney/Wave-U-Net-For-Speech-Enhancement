@@ -29,3 +29,13 @@ def getAudioData(xml_path):
         samples.append((mix, noise, speech))
 
     return samples
+
+#class DataHandler:
+#   '''
+#   Offer an alternative to using .XML file to load .wav files
+#   '''
+#   def __init__(self,clean_speech_folder,noisy_speech_folder):
+#      '''
+#      Initialize the data handler 
+#      '''
+

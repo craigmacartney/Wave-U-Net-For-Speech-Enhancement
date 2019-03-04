@@ -1,12 +1,15 @@
+'''
+File to carry out combining the Voice Bank Corpus data for training the Wave-U-Net model.
+'''
 import os
 import argparse
 import wave
 import shutil 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("clean_source")
-parser.add_argument("noisy_source")
-parser.add_argument("storage_folder")
+parser.add_argument("clean_source",help="Source directory containing clean audio files from the Voice Bank Corpus (VCTK)] data set")
+parser.add_argument("noisy_source",help = "Source directory containing the contaminated audio files from the Voice Bank Corpus (VCTK)] data set")
+parser.add_argument("storage_folder",help = "Destination folder in your working directory to store the data in a more organized fashion")
 
 if __name__ =="__main__":
     args = parser.parse_args()

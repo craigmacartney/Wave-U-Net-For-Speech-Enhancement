@@ -30,7 +30,7 @@ class MultistreamWorker_GetSpectrogram:
             # Calculate the required amounts of padding
             duration_frames = int(options["duration"] * options["expected_sr"])
             padding_duration = options["padding_duration"]
-
+            import pdb;pdb.set_trace();
             try:
                 if isinstance(item, Sample):  # Single audio file: Use metadata to read section from it
                     metadata = [item.sample_rate, item.channels, item.duration]

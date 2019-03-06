@@ -3,7 +3,7 @@ File to carry out combining the Voice Bank Corpus data for training the Wave-U-N
 '''
 import os
 import argparse
-from scipy.io.wavfile import read,write
+import librosa
 import shutil 
 
 parser = argparse.ArgumentParser()
@@ -21,9 +21,13 @@ if __name__ =="__main__":
     for file_name in files:
         if not os.path.exists("{0}/{1}".format(args.storage_folder,file_name[:-4])):
             os.mkdir("{0}/{1}".format(args.storage_folder,file_name[:-4]))
-        shutil.copy2("{0}/{1}".format(args.clean_source,file_name),"{0}/{1}/clean.wav".format(args.storage_folder,file_name[:-4]))
-        shutil.copy2("{0}/{1}".format(args.noisy_source,file_name),"{0}/{1}/mixed.wav".format(args.storage_folder,file_name[:-4]))
-        
-        fs,clean = read("{0}/{1}".format(args.clean_source,file_name))
-        fs,mixed = read("{0}/{1}".format(args.noisy_source,file_name))
-        write("{0}/{1}/noise.wav".format(args.storage_folder,file_name[:-4]),fs,mixed-clean)
+
+        clean_source_file = "{0}/{1}".format(args.clean_source,file_name)
+        clean,_ = librosa.load(clean_source_file,16000)
+        librosa.output.write_wav("{0}/{1}/clean.wav".format(args.storage_folder,file_name[:-4]),clean,16000)
+
+        mix_source_file = "{0}/{1}".format(args.noisy_source,file_name)
+        mix,_ = librosa.load(mix_source_file,16000)
+        librosa.output.write_wav("{0}/{1}/mixed.wav".format(args.storage_folder,file_name[:-4]),mix,16000)
+        librosa.output.write_wav("{0}/{1}/noise.wav".format(args.storage_folder,file_name[:-4]),mix-clean,16000)
+

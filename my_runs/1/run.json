@@ -18,7 +18,7 @@
       ], 
       [
         "Datasets.py", 
-        "_sources/Datasets_25385f98abb2be1e963552beafb3947b.py"
+        "_sources/Datasets_2846c3c8ce320dd5a5b9b0165004550b.py"
       ], 
       [
         "Input/Input.py", 
@@ -38,7 +38,7 @@
       ], 
       [
         "Training.py", 
-        "_sources/Training_a83912dc0f2108b3966c4e34d86bdf05.py"
+        "_sources/Training_6550cba257fa329a2d81e13a34158f91.py"
       ], 
       [
         "Utils.py", 
@@ -50,22 +50,7 @@
       ]
     ]
   }, 
-  "fail_trace": [
-    "Traceback (most recent call last):\n", 
-    "  File \"/home/mathew/anaconda3/envs/waveunet/lib/python2.7/site-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n", 
-    "  File \"Training.py\", line 190, in run\n    dataset_train = Datasets.getAudioData(\"audio_examples/\")\n", 
-    "  File \"/home/mathew/Documents/Wave-U-Net-For-Speech-Enhancement-1/Datasets.py\", line 16, in getAudioData\n    tree = etree.parse(xml_path)\n", 
-    "  File \"src/lxml/etree.pyx\", line 3426, in lxml.etree.parse\n", 
-    "  File \"src/lxml/parser.pxi\", line 1839, in lxml.etree._parseDocument\n", 
-    "  File \"src/lxml/parser.pxi\", line 1865, in lxml.etree._parseDocumentFromURL\n", 
-    "  File \"src/lxml/parser.pxi\", line 1769, in lxml.etree._parseDocFromFile\n", 
-    "  File \"src/lxml/parser.pxi\", line 1162, in lxml.etree._BaseParser._parseDocFromFile\n", 
-    "  File \"src/lxml/parser.pxi\", line 600, in lxml.etree._ParserContext._handleParseResultDoc\n", 
-    "  File \"src/lxml/parser.pxi\", line 710, in lxml.etree._handleParseResult\n", 
-    "  File \"src/lxml/parser.pxi\", line 639, in lxml.etree._raiseParseError\n", 
-    "XMLSyntaxError: Document is empty, line 1, column 1 (line 1)\n"
-  ], 
-  "heartbeat": "2019-03-03T19:45:38.218033", 
+  "heartbeat": null, 
   "host": {
     "ENV": {}, 
     "cpu": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz", 
@@ -114,8 +99,6 @@
     }
   }, 
   "resources": [], 
-  "result": null, 
-  "start_time": "2019-03-03T19:45:38.213630", 
-  "status": "FAILED", 
-  "stop_time": "2019-03-03T19:45:38.220748"
+  "start_time": "2019-03-06T04:28:20.748720", 
+  "status": "RUNNING"
 }

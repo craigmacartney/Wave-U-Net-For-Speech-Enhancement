@@ -1,7 +1,12 @@
 *.pyc
+logs/*
+clean_trainset_28spk_wav/*
+noisy_trainset_28spk_wav/*
+my_runs/*
 .vscode/*
 clean_trainset_wav/*
 noisy_trainset_wav/*
+train_data/*
 finished/*
 checkpoints/*
 Models/__pycache__/*

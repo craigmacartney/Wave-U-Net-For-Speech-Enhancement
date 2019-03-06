@@ -1,6 +1,6 @@
 {
   "cfg": {
-    "experiment_id": 555814, 
+    "experiment_id": 195272, 
     "model_config": {
       "augmentation": true, 
       "batch_size": 16, 
@@ -31,5 +31,5 @@
     }, 
     "seed": 1337
   }, 
-  "seed": 869737627
+  "seed": 908099697
 }

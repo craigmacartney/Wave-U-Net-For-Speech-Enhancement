@@ -38,7 +38,7 @@
       ], 
       [
         "Training.py", 
-        "_sources/Training_6550cba257fa329a2d81e13a34158f91.py"
+        "_sources/Training_24912a68fc2b77a156933fbc98a74104.py"
       ], 
       [
         "Utils.py", 
@@ -50,7 +50,19 @@
       ]
     ]
   }, 
-  "heartbeat": null, 
+  "fail_trace": [
+    "Traceback (most recent call last):\n", 
+    "  File \"/home/mathew/anaconda3/envs/waveunet/lib/python2.7/site-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n", 
+    "  File \"Training.py\", line 220, in run\n    sup_model_path, sup_loss = optimise(dataset=dataset)\n", 
+    "  File \"/home/mathew/anaconda3/envs/waveunet/lib/python2.7/site-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n", 
+    "  File \"Training.py\", line 156, in optimise\n    model_path = train(sup_dataset=dataset[\"train\"], load_model=model_path)\n", 
+    "  File \"/home/mathew/anaconda3/envs/waveunet/lib/python2.7/site-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n", 
+    "  File \"Training.py\", line 93, in train\n    sess = tf.Session(config=config)\n", 
+    "  File \"/home/mathew/anaconda3/envs/waveunet/lib/python2.7/site-packages/tensorflow/python/client/session.py\", line 1560, in __init__\n    super(Session, self).__init__(target, graph, config=config)\n", 
+    "  File \"/home/mathew/anaconda3/envs/waveunet/lib/python2.7/site-packages/tensorflow/python/client/session.py\", line 633, in __init__\n    self._session = tf_session.TF_NewSession(self._graph._c_graph, opts)\n", 
+    "InternalError: Failed to create session.\n"
+  ], 
+  "heartbeat": "2019-03-06T06:06:52.607100", 
   "host": {
     "ENV": {}, 
     "cpu": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz", 
@@ -99,6 +111,8 @@
     }
   }, 
   "resources": [], 
-  "start_time": "2019-03-06T04:28:20.748720", 
-  "status": "RUNNING"
+  "result": null, 
+  "start_time": "2019-03-06T06:06:49.500837", 
+  "status": "FAILED", 
+  "stop_time": "2019-03-06T06:06:52.644412"
 }

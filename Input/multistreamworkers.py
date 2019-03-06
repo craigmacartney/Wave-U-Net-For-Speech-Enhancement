@@ -30,7 +30,8 @@ class MultistreamWorker_GetSpectrogram:
             # Calculate the required amounts of padding
             duration_frames = int(options["duration"] * options["expected_sr"])
             padding_duration = options["padding_duration"]
-            import pdb;pdb.set_trace();
+            num_files = 0
+            skip_files = 0
             try:
                 if isinstance(item, Sample):  # Single audio file: Use metadata to read section from it
                     metadata = [item.sample_rate, item.channels, item.duration]
@@ -93,11 +94,15 @@ class MultistreamWorker_GetSpectrogram:
                         sample[0] = mix_audio
 
                     communication_queue.put(sample)
+                    num_files = num_files + 1
+                    #print("No Error while computing spectrogram. Skipping file.",skip_files/(skip_files+num_files))
             except Exception as e:
+                skip_files = skip_files + 1
                 print(e)
-                print("Error while computing spectrogram. Skipping file.")
+                print("Error while computing spectrogram. Skipping file.",skip_files/(skip_files+num_files))
 
-
+        #print("Number of files pushed to training :{}".format(num_files))
+        #print("Number of files skipped to training :{}".format(skip_files))
         # This is necessary so that this process does not block. In particular, if there are elements still in the queue
         # from this process that were not yet 'picked up' somewhere else, join and terminate called on this process will
         # block

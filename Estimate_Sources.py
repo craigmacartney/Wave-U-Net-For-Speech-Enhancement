@@ -154,7 +154,7 @@ def produce_source_estimates(model_config, load_model, input_path, output_path=N
     sources_pred = predict(track, model_config, load_model) # Input track to prediction function, get source estimates
 
     # Save source estimates as audio files into output dictionary
-    input_folder, input_filename = os.path.split(input_path)
+    input_folder, input_filename = input_path[:-9],input_path[-9:-4]
     if output_path is None:
         # By default, set it to the input_path folder
         output_path = input_folder
@@ -164,3 +164,12 @@ def produce_source_estimates(model_config, load_model, input_path, output_path=N
     assert(os.path.exists(output_path))
     for source_name, source_audio in sources_pred.items():
         librosa.output.write_wav(os.path.join(output_path, input_filename) + "_" + source_name + ".wav", source_audio, sr)
+        
+        
+        
+        
+        
+        
+        
+        
+        

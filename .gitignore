@@ -14,3 +14,8 @@ Models/*.pyc
 Input/*.pyc
 Input/__pycache/*
 __pycache__/*
+Results/*
+clean_testset_wav/*
+noisy_testset_wav/*
+test_data/*
+.ipynb_checkpoints/*

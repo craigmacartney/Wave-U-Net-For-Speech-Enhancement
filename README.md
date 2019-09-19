@@ -1,6 +1,6 @@
 # Speech Enhancement with the Wave-U-Net
 
-This repo is for personal research into existing wavenet architectures for audio denoising. The model by itself has not been modified, however, provisions were made to allow data loading to be easier (*without XML files). The model was trained for 84 epochs. Pretrained weights are available on request.
+This repo is for personal research into existing wavenet architectures for audio denoising. The model by itself has not been modified, however, provisions were made to allow data loading to be easier (*without XML files). 
 
 The [Wave-U-Net applied to speech enhancement](http://arxiv.org/abs/1811.11307) [1], an adaptation of the [original implementation](https://github.com/f90/Wave-U-Net) for music source separation by [Stoller et al](https://arxiv.org/abs/1806.03185) [2].
 

@@ -1,6 +1,6 @@
 # Improved Speech Enhancement with the Wave-U-Net
 
-The [Wave-U-Net applied to speech enhancement](http://arxiv.org/abs/1811.11307) [1], an adaptation of the [original implementation](https://github.com/f90/Wave-U-Net) for music source separation by [Stoller et al](https://arxiv.org/abs/1806.03185) [2].
+The [Wave-U-Net applied to speech enhancement](http://arxiv.org/abs/1811.11307) [1], an adaptation of the original implementation for music source separation by [Stoller et al](https://arxiv.org/abs/1806.03185) [2].
 
 The Wave-U-Net is a convolutional neural network applicable to audio source separation tasks, recently introduced by Stoller et al for the separation of music vocals and accompaniment [2]. A 1D convolutional time domain variant of the 2D convolutions within the U-Net [3], this end-to-end learning method for audio source separation operates directly in the time domain, permitting the integrated modelling of phase information and being able to take large temporal contexts into account.
 

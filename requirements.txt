@@ -1,5 +1,5 @@
 sacred==0.7.3
-tensorflow-gpu==1.8.0
+tensorflow-gpu==2.5.3
 librosa==0.6.2
 soundfile==0.10.2
 scikits.audiolab==0.11.0
